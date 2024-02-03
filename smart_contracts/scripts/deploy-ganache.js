@@ -5,7 +5,7 @@ const { getAmountInWei, deployContract } = require("../utils/helpers");
 
 async function main() {
   const deployNetwork = hre.network.name;
-  const mintCost = getAmountInWei(10); // 10 matic
+  const mintCost = getAmountInWei(10); // 10 dtoken
 
   // Deploy DAI ERC20 mock
   const mockDAI = await deployContract("ERC20Mock", [18]);
