@@ -1,7 +1,12 @@
 
-      export const marketContractAddress = "0x71Ac37334199bE2C10a6e74EF0636979692163d4"
-      export const collectorsContractAddress = "0x473fB8B9ay6hB63784837b94f90e2B9a6b9p90b3"
-      export const nftContractAddress = "0xa73fB8B9a88fB63784837b94f90e2B9a6b9734C1"
+      // Contracts Deployed And Verified On Dnero Mainnet
+      //DGNMMarket
+      export const marketContractAddress = "0x693138B8C2Bf579109E7f174C61d6eDEdFBE1d75"
+      //DGNMCollectors
+      export const collectorsContractAddress = "0x859825084e8B703cF090810668088dc2CcF3676C"
+      //DGNMCollection
+      export const nftContractAddress = "0x9294281a610794D27dB09276231Bb67D8D4075Ea"
+      //
       export const mockDAIAddress = "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063"
-      export const ownerAddress = "0xd4eFCA925505121D9039BE8DCFafaC862254A8be"
-      export const networkDeployedTo = "137"
+      export const ownerAddress = "0x32943D8EDAdD1f202e17115Ef977C9AFcc464c0e"
+      export const networkDeployedTo = "5647"
