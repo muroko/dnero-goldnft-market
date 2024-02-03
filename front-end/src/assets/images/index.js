@@ -9,10 +9,10 @@ import nft1 from "./nft1.png";
 import nft2 from "./nft2.png";
 import nft3 from "./nft3.png";
 import nft4 from "./nft4.png";
-import dai from "./dai.png";
+import wdnero from "./wdnero.png";
 import usdt from "./usdt.png";
 import usdc from "./usdc.png";
-import matic from "./matic.png";
+import dtoken from "./dtoken.png";
 import profile_banner from "./profile_banner.png";
 
 export default {
@@ -27,9 +27,9 @@ export default {
   nft2,
   nft3,
   nft4,
-  dai,
+  wdnero,
   usdc,
   usdt,
-  matic,
+  dtoken,
   profile_banner,
 };
