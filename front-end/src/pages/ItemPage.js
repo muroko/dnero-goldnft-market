@@ -23,7 +23,7 @@ import {
 } from "../utils/contracts-config";
 import networksMap from "../utils/networksMap.json";
 import { approveERC20, approveERC721 } from "../utils/exchange-utils";
-import { MATIC, parseTokenAmount, tokens } from "../utils/tokens-utils";
+import { DTOKEN, parseTokenAmount, tokens } from "../utils/tokens-utils";
 import images from "../assets/images";
 
 const ItemPage = () => {
@@ -52,19 +52,19 @@ const ItemPage = () => {
   const [offer, setOffer] = useState({
     hasOffer: false,
     amount: 0,
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
     expireAt: new Date(),
   });
 
   const [listingParams, setListingParams] = useState({
     amount: 0,
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
   });
 
   const [auctionParams, setAuctionParams] = useState({
     startPrice: 0,
     directPrice: 0,
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
     startTime: new Date(),
     endTime: new Date(),
   });
@@ -192,7 +192,7 @@ const ItemPage = () => {
         offer.amount
       );
 
-      if (offer.paymentToken !== MATIC) {
+      if (offer.paymentToken !== DTOKEN) {
         await approveERC20(
           signer,
           offer.paymentToken,
@@ -209,7 +209,7 @@ const ItemPage = () => {
       } else {
         const offer_tx = await market_contract.makeOffer(
           Number(id),
-          MATIC,
+          DTOKEN,
           amount,
           offer.expireAt,
           {
@@ -508,7 +508,7 @@ const ItemPage = () => {
               <div className="filter-input">
                 <label>Payment Token</label>
                 <select value={offer.paymentToken}>
-                  {tokens["Polygon Mainnet"].map((token, index) => {
+                  {tokens["Dnero Mainnet"].map((token, index) => {
                     return (
                       <option
                         className="token_row"
@@ -557,7 +557,7 @@ const ItemPage = () => {
               <div className="filter-input">
                 <label>Payment Token</label>
                 <select value={listingParams.paymentToken}>
-                  {tokens["Polygon Mainnet"].map((token, index) => {
+                  {tokens["Dnero Mainnet"].map((token, index) => {
                     return (
                       <option
                         className="token_row"
@@ -612,7 +612,7 @@ const ItemPage = () => {
               <div className="filter-input">
                 <label>Payment Token</label>
                 <select value={auctionParams.paymentToken}>
-                  {tokens["Polygon Mainnet"].map((token, index) => {
+                  {tokens["Dnero Mainnet"].map((token, index) => {
                     return (
                       <option
                         className="token_row"

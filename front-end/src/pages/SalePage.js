@@ -21,7 +21,7 @@ import {
 import networksMap from "../utils/networksMap.json";
 import { approveERC20 } from "../utils/exchange-utils";
 import {
-  MATIC,
+  DTOKEN,
   getTokenFromAddress,
   formatTokenAmount,
   tokens,
@@ -37,7 +37,7 @@ const SalePage = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [paymentToken, setPaymentToken] = useState(MATIC);
+  const [paymentToken, setPaymentToken] = useState(DTOKEN);
   const [saleInfo, setSaleInfo] = useState({
     tokenId: 0,
     ownerInfo: "",
@@ -49,7 +49,7 @@ const SalePage = () => {
     imageUri: "",
     category: "",
     seller: "",
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
     price: 0,
   });
 
@@ -324,7 +324,7 @@ const SalePage = () => {
           <AiOutlineClose onClick={handleClose} />
         </Modal.Header>
         <Modal.Body>
-          {tokens["Polygon Mainnet"].map((token, index) => {
+          {tokens["Dnero Mainnet"].map((token, index) => {
             return (
               <div
                 className="token_row"

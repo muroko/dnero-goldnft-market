@@ -5,7 +5,7 @@ import qs from "qs";
 import ERC20 from "../artifacts/interfaces/IERC20.sol/IERC20.json";
 import DGNMCollection from "../artifacts/interfaces/IDGNMCollection.sol/IDGNMCollection.json";
 
-const matic = "MATIC";
+const dtoken = "DTOKEN";
 const apiPriceUrl = "https://polygon.api.0x.org/swap/v1/price?";
 const apiQuoteUrl = "https://polygon.api.0x.org/swap/v1/quote?";
 
@@ -28,7 +28,7 @@ async function getAssetToAssetPrice(fromAsset, toAsset) {
   console.log("%O", response.data.source);
 }
 
-async function getAssetsToMaticPrice(assets) {
+async function getAssetsToDTokenPrice(assets) {
   let response;
 
   const unit = utils.parseEther("1", "ether");
@@ -37,7 +37,7 @@ async function getAssetsToMaticPrice(assets) {
     assets.map(async (asset, index) => {
       const params = {
         sellToken: asset,
-        buyToken: matic,
+        buyToken: dtoken,
         sellAmount: unit,
       };
       try {
@@ -102,7 +102,7 @@ async function approveERC721(signer, tokenAddress, spender, tokenId) {
 
 export {
   getAssetToAssetPrice,
-  getAssetsToMaticPrice,
+  getAssetsToDTokenPrice,
   swap,
   approveERC20,
   approveERC721,
