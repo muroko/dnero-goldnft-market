@@ -45,8 +45,8 @@ function NavBar() {
           <FontAwesomeIcon icon={faClose} color="white" size="2x" />
         </div>
         <div className="nav-links-div">
-          <a href="/create-nft" className="nav-link-ref">
-            Mint
+          <a href="/register" className="nav-link-ref">
+            Join
           </a>
           <a href="/#about" className="nav-link-ref">
             About
