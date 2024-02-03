@@ -107,6 +107,18 @@ const CreateNFT = () => {
   return (
     <div className="create section__padding">
       {wallet.registred ? (
+	    
+        <div className="listing-text">
+          <p>You must be registered to mint DGNM tokens</p>
+          <div className="mint-btn">
+            <button>
+              <a href="/register" style={{ color: "white" }}>
+                Register
+              </a>
+            </button>
+          </div>
+        </div>
+        ) : (
         <div className="create-container">
           <h1>Create new NFT</h1>
           <form className="writeForm" autoComplete="off">
@@ -148,15 +160,7 @@ const CreateNFT = () => {
               </select>
             </div>
             <div className="formGroup">
-              <label>Art Image Description</label>
-              <textarea
-                type="text"
-                rows={4}
-                placeholder="Enter the image description for the AI generator"
-              ></textarea>
-            </div>
-            <div className="formGroup">
-              <label>Art Image Description</label>
+              <label>Upload File</label>
               <input
                 type="file"
                 onChange={async (e) => {
@@ -180,20 +184,10 @@ const CreateNFT = () => {
             </div>
           </form>
         </div>
-      ) : (
-        <div className="listing-text">
-          <p>You must be registered to mint DGNM tokens</p>
-          <div className="mint-btn">
-            <button>
-              <a href="/register" style={{ color: "white" }}>
-                Register
-              </a>
-            </button>
-          </div>
-        </div>
       )}
     </div>
   );
 };
 
 export default CreateNFT;
+
