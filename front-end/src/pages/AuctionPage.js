@@ -22,7 +22,7 @@ import networksMap from "../utils/networksMap.json";
 import { IPFS_GATEWAY } from "../utils/ipfsStorage";
 import { approveERC20 } from "../utils/exchange-utils";
 import {
-  MATIC,
+  DTOKEN,
   tokens,
   formatTokenAmount,
   getTokenFromAddress,
@@ -58,7 +58,7 @@ const AuctionPage = () => {
     description: "",
     imageUri: "",
     category: "",
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
     highestBid: 0,
     highestBidder: "",
     startPrice: 0,
@@ -71,7 +71,7 @@ const AuctionPage = () => {
 
   const [biddingParams, setBiddingParams] = useState({
     bidAmount: 0,
-    paymentToken: MATIC,
+    paymentToken: DTOKEN,
   });
 
   const getAuctionDetails = async () => {
@@ -204,7 +204,7 @@ const AuctionPage = () => {
       );
       try {
         setLoading(true);
-        if (auctionInfo.paymentToken !== MATIC) {
+        if (auctionInfo.paymentToken !== DTOKEN) {
           await approveERC20(
             signer,
             auctionInfo.paymentToken,
@@ -247,7 +247,7 @@ const AuctionPage = () => {
       );
       try {
         setLoading(true);
-        if (auctionInfo.paymentToken !== MATIC) {
+        if (auctionInfo.paymentToken !== DTOKEN) {
           await approveERC20(
             signer,
             auctionInfo.paymentToken,
@@ -421,7 +421,7 @@ const AuctionPage = () => {
               <tbody>
                 {auctionInfo.status === "Open" ? (
                   <>
-                    {auctionInfo.highestBidder === MATIC ? (
+                    {auctionInfo.highestBidder === DTOKEN ? (
                       <tr>
                         <td className="p-2">Start price</td>
                         <td>
@@ -645,7 +645,7 @@ const AuctionPage = () => {
             <div className="filter-input">
               <label>Payment Token</label>
               <select>
-                {tokens["Polygon Mainnet"].map((token, index) => {
+                {tokens["Dnero Mainnet"].map((token, index) => {
                   return (
                     <option
                       className="token_row"
