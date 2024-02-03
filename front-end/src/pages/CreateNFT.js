@@ -107,18 +107,6 @@ const CreateNFT = () => {
   return (
     <div className="create section__padding">
       {wallet.registred ? (
-	    
-        <div className="listing-text">
-          <p>You must be registered to mint DGNM tokens</p>
-          <div className="mint-btn">
-            <button>
-              <a href="/register" style={{ color: "white" }}>
-                Register
-              </a>
-            </button>
-          </div>
-        </div>
-        ) : (
         <div className="create-container">
           <h1>Create new NFT</h1>
           <form className="writeForm" autoComplete="off">
@@ -183,6 +171,18 @@ const CreateNFT = () => {
               </button>
             </div>
           </form>
+        </div>
+	  ) : (
+        <div className="listing-text">
+          <p>You must be registered and be an Admin to mint Dnero GoldNft tokens. After Registeration,
+		  please disconnect your wallet from Metamask and Reconnect again.</p>
+          <div className="mint-btn">
+            <button>
+              <a href="/register" style={{ color: "white" }}>
+                Register
+              </a>
+            </button>
+          </div>
         </div>
       )}
     </div>
