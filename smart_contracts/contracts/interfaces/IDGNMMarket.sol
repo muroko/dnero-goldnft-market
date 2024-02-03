@@ -33,7 +33,7 @@ interface IDGNMMarket {
     struct Listing {
         uint256 tokenId;
         address seller;
-        address paymentToken; // set to address(0) for MATIC
+        address paymentToken; // set to address(0) for DTOKEN
         uint256 buyPrice;
         ListingStatus status;
     }
@@ -41,7 +41,7 @@ interface IDGNMMarket {
     struct Offer {
         address offerer;
         uint256 price;
-        address paymentToken; // set to address(0) for MATIC
+        address paymentToken; // set to address(0) for DTOKEN
         uint48 expireTime;
         OfferStatus status;
     }
@@ -49,7 +49,7 @@ interface IDGNMMarket {
     struct Auction {
         uint256 tokenId;
         address seller;
-        address paymentToken; // set to address(0) for MATIC
+        address paymentToken; // set to address(0) for DTOKEN
         address highestBidder;
         uint48 startTime;
         uint48 endTime;

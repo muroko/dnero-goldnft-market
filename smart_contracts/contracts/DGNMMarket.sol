@@ -159,7 +159,7 @@ contract DGNMMarket is
         if (_expirationTime <= block.timestamp)
             revert DGNMMarket_InvalidExpirationTime();
         if (_paymentToken == address(0)) {
-            // can not approve MATIC so offerer is obliged to escrow offerPrice to this contract
+            // can not approve DTOKEN so offerer is obliged to escrow offerPrice to this contract
             // the fund can be withdrawn by canceling the offer
             if (msg.value != _offerPrice)
                 revert DGNMMarket_InsufficientAmount();
@@ -230,7 +230,7 @@ contract DGNMMarket is
         offer.status = OfferStatus.Ended;
 
         if (offer.paymentToken == address(0)) {
-            // return MATIC amount escowed when creating offer to offerer
+            // return DTOKEN amount escowed when creating offer to offerer
             PaymentLib.transferNativeToken(offer.offerer, offer.price);
         }
 

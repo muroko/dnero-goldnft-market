@@ -7,7 +7,7 @@ const {
   deployContract,
 } = require("../../utils/helpers");
 
-const mintFee = getAmountInWei(10); // mint fee = 10 MATIC
+const mintFee = getAmountInWei(10); // mint fee = 10 DTOKEN
 const TEST_URI = "ipfs://test-nft-uri";
 
 !developmentChains.includes(network.name)

@@ -16,7 +16,7 @@ contract DGNMCollection is ERC721URIStorage, ERC2981, Ownable {
 
     // USE uint256 instead of bool to save gas
     // paused = 1 && active = 2
-    uint256 public paused = 1;
+    uint256 public paused = 2;
 
     // mint fee in DToken
     uint256 public mintFee = 10;

@@ -511,7 +511,7 @@ const mintFee = getAmountInWei(10);
             );
           });
         });
-        describe("MATIC payment", () => {
+        describe("DTOKEN payment", () => {
           let auctionId = 0;
           before(async () => {
             await resetTime();
@@ -693,7 +693,7 @@ const mintFee = getAmountInWei(10);
               expect(auction.status).to.be.equal(AuctionStatus.DirectBuy);
             });
           });
-          describe("MATIC payment", () => {
+          describe("DTOKEN payment", () => {
             let auctionId = 0;
             let user1InitialBalance;
             let fee, feeRecipientBeforeBalance;
@@ -705,7 +705,7 @@ const mintFee = getAmountInWei(10);
 
               fee = Number(await marketContract.fee());
 
-              // user1 matic balance
+              // user1 dtoken balance
               user1InitialBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user1.address)
               );
@@ -751,7 +751,7 @@ const mintFee = getAmountInWei(10);
               );
             });
             it("should send buy price to seller", async () => {
-              // user1 matic after balance
+              // user1 dtoken after balance
               const user1FinalBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user1.address)
               );
@@ -869,7 +869,7 @@ const mintFee = getAmountInWei(10);
               expect(auction.status).to.be.equal(AuctionStatus.DirectBuy);
             });
           });
-          describe("MATIC payment", () => {
+          describe("DTOKEN payment", () => {
             let auctionId = 0;
             let user1InitialBalance;
             let user2InitialBalance;
@@ -886,12 +886,12 @@ const mintFee = getAmountInWei(10);
 
               fee = Number(await marketContract.fee());
 
-              // user1 matic balance
+              // user1 dtoken balance
               user1InitialBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user1.address)
               );
 
-              // user2 matic balance
+              // user2 dtoken balance
               user2InitialBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user2.address)
               );
@@ -935,7 +935,7 @@ const mintFee = getAmountInWei(10);
               expect(feeRecepientAfterBalance).to.be.equal(expectedBalance);
             });
             it("should send royalty to original creator", async () => {
-              // user1 matic after balance
+              // user1 dtoken after balance
               const user1FinalBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user1.address)
               );
@@ -949,7 +949,7 @@ const mintFee = getAmountInWei(10);
               );
             });
             it("should send remaining buy price to seller", async () => {
-              // user2 matic after balance
+              // user2 dtoken after balance
               const user2FinalBalance = getAmountFromWei(
                 await ethers.provider.getBalance(user2.address)
               );
@@ -1100,7 +1100,7 @@ const mintFee = getAmountInWei(10);
                 expect(auction.status).to.be.equal(AuctionStatus.Ended);
               });
             });
-            describe("MATIC payment", () => {
+            describe("DTOKEN payment", () => {
               let auctionId = 0;
               let user1InitialBalance;
               let fee, feeRecipientBeforeBalance;
@@ -1112,7 +1112,7 @@ const mintFee = getAmountInWei(10);
 
                 fee = Number(await marketContract.fee());
 
-                // user1 matic balance
+                // user1 dtoken balance
                 user1InitialBalance = getAmountFromWei(
                   await ethers.provider.getBalance(user1.address)
                 );
@@ -1310,7 +1310,7 @@ const mintFee = getAmountInWei(10);
                 expect(auction.status).to.be.equal(AuctionStatus.Ended);
               });
             });
-            describe("MATIC payment", () => {
+            describe("DTOKEN payment", () => {
               let auctionId = 0;
               let user1InitialBalance;
               let user2InitialBalance;
@@ -1327,12 +1327,12 @@ const mintFee = getAmountInWei(10);
 
                 fee = Number(await marketContract.fee());
 
-                // user1 matic balance
+                // user1 dtoken balance
                 user1InitialBalance = getAmountFromWei(
                   await ethers.provider.getBalance(user1.address)
                 );
 
-                // user2 matic balance
+                // user2 dtoken balance
                 user2InitialBalance = getAmountFromWei(
                   await ethers.provider.getBalance(user2.address)
                 );
@@ -1392,7 +1392,7 @@ const mintFee = getAmountInWei(10);
                 );
               });
               it("should send royalty to original creator", async () => {
-                // user1 matic after balance
+                // user1 dtoken after balance
                 const user1FinalBalance = getAmountFromWei(
                   await ethers.provider.getBalance(user1.address)
                 );
@@ -1405,7 +1405,7 @@ const mintFee = getAmountInWei(10);
                 );
               });
               it("should send remaining buy price to seller", async () => {
-                // user2 matic after balance
+                // user2 dtoken after balance
                 const user2FinalBalance = getAmountFromWei(
                   await ethers.provider.getBalance(user2.address)
                 );
@@ -1525,7 +1525,7 @@ const mintFee = getAmountInWei(10);
             ).to.be.equal(0);
           });
         });
-        describe("MATIC payment", () => {
+        describe("DTOKEN payment", () => {
           let auctionId = 0;
           before(async () => {
             await resetTime();
