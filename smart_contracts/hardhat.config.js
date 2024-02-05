@@ -1,7 +1,7 @@
 require('dotenv').config()
 require("@nomiclabs/hardhat-waffle");
 //require("@nomiclabs/hardhat-etherscan");
-require("hardhat-abi-exporter");
+//require("hardhat-abi-exporter");
 //require("hardhat-docgen");
 const fs = require("fs");
 
@@ -30,12 +30,12 @@ module.exports = {
     dneromainnet: mainnetNetworkConfig(),
     goerli: goerliNetworkConfig(),
   },
-  abiExporter: {
-    path: "./build/abi",
-    clear: true,
-    flat: true,
-    spacing: 2,
-  },
+//  abiExporter: {
+//    path: "./build/abi",
+//    clear: true,
+//    flat: true,
+//    spacing: 2,
+//  },
 };
 
 function dashboardNetworkConfig() {
