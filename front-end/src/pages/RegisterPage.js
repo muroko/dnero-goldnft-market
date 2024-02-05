@@ -110,9 +110,9 @@ const RegisterPage = () => {
         let tokenId = await collectors_contract.callStatic.create("test-uri");
 
         const metadataCid = await saveContent(
-          new File([data], `DGNM-Artist-${Number(tokenId)}.json`)
+          new File([data], `DGNM-Collector-${Number(tokenId)}.json`)
         );
-        const metadataIpfsHash = `ipfs://${metadataCid}/DGNM-Artist-${Number(
+        const metadataIpfsHash = `ipfs://${metadataCid}/DGNM-Collector-${Number(
           tokenId
         )}.json`;
 
@@ -188,9 +188,9 @@ const RegisterPage = () => {
         const data = JSON.stringify(metadata);
 
         const metadataCid = await saveContent(
-          new File([data], `DGNM-Artist-${profile.tokenId}.json`)
+          new File([data], `DGNM-Collector-${profile.tokenId}.json`)
         );
-        const metadataIpfsHash = `ipfs://${metadataCid}/DGNM-Artist-${profile.tokenId}.json`;
+        const metadataIpfsHash = `ipfs://${metadataCid}/DGNM-Collector-${profile.tokenId}.json`;
 
         const edit_tx = await collectors_contract.update(
           profile.tokenId,
