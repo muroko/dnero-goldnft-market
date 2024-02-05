@@ -14,9 +14,9 @@ async function main() {
 
   //console.log("Token address:", token.address);
 
-  const nftContract = await ethers.getContractFactory("DGNMCollection");
-  const dGNMCollection = await nftContract.deploy("0x859825084e8B703cF090810668088dc2CcF3676C","10"); //Need "CollectorsContract Address" And "10" for MinCost in the Constructor
-  console.log("nftContract address:", dGNMCollection.address);
+  const marketContract = await ethers.getContractFactory("DGNMMarket");
+  const dGNMMarket = await marketContract.deploy("0xca38076a23666FcDF544F473e41AA76B981289BF"); //Need nftContract Address
+  console.log("marketContract address:", dGNMMarket.address);
   
   //const WDToken = await ethers.getContractFactory("WDToken");
   //const wDToken = await WDToken.deploy();
