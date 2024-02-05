@@ -172,19 +172,18 @@ const CreateNFT = () => {
             </div>
           </form>
         </div>
-	  ) : (
-        <div className="listing-text">
-          <p>You must be registered and be an Admin to mint Dnero GoldNft tokens. After Registeration,
-		  please disconnect your wallet from Metamask and Reconnect again.</p>
-          <div className="mint-btn">
-            <button>
-              <a href="/register" style={{ color: "white" }}>
-                Register
-              </a>
-            </button>
-          </div>
-        </div>
-      )}
+        ) : (
+         <div className="listing-text">
+            <p>You must be registered and be an Admin to mint Dnero GoldNft tokens.   After Registeration, please disconnect your wallet from Metamask and Reconnect again.</p>
+              <div className="mint-btn">
+                <button>
+                   <a href="/register" style={{ color: "white" }}>
+                     Register
+                   </a>
+                </button>
+             </div>
+         </div>
+       )}
     </div>
   );
 };
