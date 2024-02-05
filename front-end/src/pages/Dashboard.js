@@ -143,9 +143,9 @@ const Dashboard = () => {
             }
           })
         );
-        setCreatedNftsList(items);
-      } else {
-        setCreatedNftsList([]);
+        //setCreatedNftsList(items);
+      //} else {
+        setCreatedNftsList([]); //Temp Fix - Dashboard NFTs Display
       }
     }
   };
