@@ -143,16 +143,17 @@ const Dashboard = () => {
             }
           })
         );
-        //setCreatedNftsList(items);
-      //} else {
-        setCreatedNftsList([]); //Temp Fix - Dashboard NFTs Display
+        setCreatedNftsList(items);
+      } else {
+        setCreatedNftsList([]);
       }
     }
   };
 
   useEffect(() => {
     const get = async () => {
-      if (window.ethereum !== undefined) {
+    //  if (window.ethereum !== undefined) {
+	  if (window.ethereum) {	  
         await getUserTokens();
         await getCreatedNfts();
       }
